@@ -13,7 +13,7 @@ main()
   int n,f,c;
   int size;
   
-  printf("Enter the number of states: ");
+  printf("Enter the number of states in the DFA: ");
   scanf("%d",&n);
   state *s = (state *)malloc(sizeof(state)*n);
   
@@ -28,11 +28,11 @@ main()
   printf("Enter final state: ");
   scanf("%d",&f);
   
-  printf("Enter string size: ");
+  printf("Enter the length of the string: ");
   scanf("%d",&size);
   int *str = (int *)malloc(sizeof(int)*size);
   
-  printf("Enter String: ");
+  printf("Enter each charater of String: ");
   for(int i=0;i<size;i++)
   {
     str[i] = (int)getch() - 48;
@@ -49,7 +49,7 @@ main()
   }
   
   if(f==c)
-    printf("String is Valid");
+    printf("String accepted by the DFA");
   else
-    printf("String is Invalid");
+    printf("String not accepted by the DFA");
 }
